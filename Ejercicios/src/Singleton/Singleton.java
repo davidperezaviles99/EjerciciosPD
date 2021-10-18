@@ -18,7 +18,7 @@ public class Singleton {
 	
 	public static Singleton getSingletonInstance(String nombre, String email, String direccion ) {
 		if(unico == null) {
-			unico = new Singleton(nombre,email,direccion);
+			unico = new Singleton("David","david@gmail.com","calle");
 		}else {
 			System.out.println("No se puede crear el objeto" +nombre + "\nporque ya existe");
 		}
