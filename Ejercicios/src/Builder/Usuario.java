@@ -25,3 +25,4 @@ public class Usuario {
 		this.direccion = direccion;
 	}
 }
+

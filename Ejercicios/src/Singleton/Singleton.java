@@ -8,19 +8,18 @@ public class Singleton {
 	
 	private static Singleton unico;
 	
-	public Singleton(String nombre, String email, String direccion) {
+	private Singleton(String nombre, String email, String direccion) {
 		this.nombre = nombre;
 		this.email = email;
 		this.direccion = direccion;
-		
 		System.out.println("Mi nombre es: " + this.nombre + "\nMi email es: " +this.email+ "\nMi direccion es: " +this.direccion);
 	}
 	
 	public static Singleton getSingletonInstance(String nombre, String email, String direccion ) {
 		if(unico == null) {
-			unico = new Singleton("David","david@gmail.com","calle");
+			unico = new Singleton(nombre, email, direccion);
 		}else {
-			System.out.println("No se puede crear el objeto" +nombre + "\nporque ya existe");
+			System.out.println("No se puede crear el objeto: " +nombre + " porque ya existe un unico");
 		}
 		return unico;
 	}
